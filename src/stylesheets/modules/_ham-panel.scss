@@ -1,0 +1,152 @@
+.ham-panel {
+	height: calc(100vh);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 100px 0 40px; // top = header height
+	opacity: 0;
+	transform: translateX(200px);
+	transition: all .65s ease-in-out; 
+
+	&.active {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	@include media-breakpoint-up(sm) {
+		width: 300px;
+		left: auto;
+	}
+
+	&__holder {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		overflow-y: scroll;
+	}
+
+	&__info {
+		padding: 0 40px;
+		text-align: center;
+	}
+
+	&__request {
+		margin-bottom: 40px;
+	}
+
+	&__phone {
+		a {
+			text-decoration: none;
+			color: $main-text-color;
+			font-weight: 600;
+		}
+	}
+
+	&__mail {
+		a {
+			color: $main-text-color;
+			text-decoration: none;
+			border-bottom: 1px solid #e1e3e4;
+			line-height: 1;
+		}
+	}
+}
+
+.ham-panel-nav {
+	margin-bottom: 30px;
+	
+	& > ul {
+		padding-left: 0;
+		list-style: none;
+		
+		& > li {	
+			margin-bottom: 5px;
+			
+			& > a,
+			& > span {
+				color: $main-text-color;
+				padding: 10px 40px;
+				text-decoration: none;
+				display: block;
+			}
+			
+			&.active a {
+				pointer-events: none;
+				background-color: rgba(131, 131, 131, .2);
+			}
+
+			&.has-children > a,
+			&.has-children > span {
+				padding-right: 60px;
+				position: relative;
+
+				&:before {
+					content: '';
+					border: 7px solid transparent;
+					border-top-color: $main-text-color;
+					position: absolute;
+					right: 20px;
+					top: 8px;
+					bottom: 0;
+					margin: auto 0;
+					width: 0;
+					height: 0;
+				}
+			}
+
+			&.droped.has-children > a,
+			&.droped.has-children > span {
+				&:before {
+					transform: rotate(180deg);
+					transform-origin: 50% 25%;
+				}
+			}
+		}
+	}
+
+	.sub-nav {
+		overflow: hidden;
+		position: relative;
+		display: none;
+		
+		ul {
+			list-style: none;
+			margin: 5px 0 0 0;
+			padding-left: 0;
+			overflow: hidden;
+			transition: all .5s ease-out;
+
+			li {
+				margin-bottom: 10px;
+				padding-left: 55px;
+
+				a {
+					text-decoration: none;
+					font-size: 14px;
+					color: $main-text-color;
+				}
+			}
+		}
+	}
+}
+
+.page-content {
+
+	@include media-breakpoint-up(sm) {
+		box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.2);
+	}
+	
+	&.ham-active {
+		transform: translateX(-100%);
+
+		@include media-breakpoint-up(sm) {
+			transform: translateX(-300px);
+		}
+
+		@include media-breakpoint-up(lg) {
+			transform: translateX(0);
+		}
+	}
+}

@@ -1,0 +1,33 @@
+<div class="ham-panel">
+	<div class="ham-panel__holder">
+		<nav class="ham-panel-nav">
+			<ul>
+				{% for item in navigation %}
+					{% if item.children|default(false) and item.children|length %}
+						<li class="has-children">
+							<span>{{ item.title }}</span>
+							<div class="sub-nav">
+								<ul>
+									{% for item in item.children %}
+										<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</li>
+					{% else %}
+						<li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+		<div class="ham-panel__info">
+			<div class="ham-panel__request">
+				<a href="#" class="btn btn-light">Оставить заявку</a>
+			</div> 
+			
+			<div class="ham-panel__phone"><a href="tel:8 (905) 959-55-33">8 (905) 959-55-33</a></div>
+			<div class="ham-panel__mail"><a href="mailto:info@log-innovation.ru">info@log-innovation.ru</a></div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,22 @@
+@import "imports";
+
+.page-list {
+	padding-top: 140px;
+	background-color: rgb(87, 192, 211);
+	height: 100vh;
+
+	@include media-breakpoint-up(lg) {
+			background: linear-gradient(to bottom, rgb(87, 192, 211), rgb(19, 152, 175));
+	}
+
+	h1 {
+			margin-bottom: 30px;
+	}
+	
+	ol {
+			padding-left: 20px;
+			li {
+					margin-bottom: 5px;
+			}
+	}
+}
