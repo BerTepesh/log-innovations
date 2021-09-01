@@ -16,28 +16,29 @@
 						<a href="#" target="_blank" rel="noopener noreferrer">WSP-studio</a>
 					</div>
 				</div>
-				<div class="footer__col">
-					<nav class="footer-main-nav">
-						<ul>
-							{% for item in navigation %}
-								{% if item.children|default(false) and item.children|length %}
-									<li class="has-children">
+				<nav class="footer__col footer-main-nav">
+					<ul>
+						{% for item in navigation %}
+							{% if item.children|default(false) and item.children|length %}
+								<li class="has-children dropdown" data-plugin="dropdown">
+									<span>
 										<a href="#">{{ item.title }}</a>
-										<div class="sub-nav">
-											<ul>
-												{% for item in item.children %}
-													<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-												{% endfor %}
-											</ul>
-										</div>
-									</li>
-								{% else %}
-									<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-								{% endif %}
-							{% endfor %}
-						</ul>
-					</nav>
-				</div>
+										<a href="#submenu" data-dropdown-btn class="dropdown-trigger">&nbsp;</a>
+									</span>
+									<div class="sub-nav dropdown-content" data-dropdown-content="submenu">
+										<ul>
+											{% for item in item.children %}
+												<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
+								</li>
+							{% else %}
+								<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+							{% endif %}
+						{% endfor %}
+					</ul>
+				</nav>
 				<nav class="footer-sub-nav footer__col">
 					{% for item in navigation %}
 						{% if item.children|default(false) and item.children|length %}

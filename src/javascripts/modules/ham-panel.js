@@ -25,7 +25,7 @@ $(function(){
 		}
 	});
 
-	$('.ham-panel-nav li.has-children span').click(function() {
+	$('.ham-panel-nav li.has-children .sub-trigger').click(function() {
 		var submenu = $(this).closest('li').children('.sub-nav');
 		if ( $(submenu).is(':hidden') ) {
 			$(submenu).slideDown(300);	
@@ -34,5 +34,6 @@ $(function(){
 			$(submenu).slideUp(300);
 			$(this).closest('li').removeClass('droped');
 		}
+		return false;
 	});
 });

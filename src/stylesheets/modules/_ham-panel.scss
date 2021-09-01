@@ -65,7 +65,7 @@
 			margin-bottom: 5px;
 			
 			& > a,
-			& > span {
+			& span  a {
 				color: $main-text-color;
 				padding: 10px 40px;
 				text-decoration: none;
@@ -77,27 +77,43 @@
 				background-color: rgba(131, 131, 131, .2);
 			}
 
-			&.has-children > a,
-			&.has-children > span {
-				padding-right: 60px;
-				position: relative;
+			&.has-children {
+				padding-right: 30px;
 
-				&:before {
-					content: '';
-					border: 7px solid transparent;
-					border-top-color: $main-text-color;
-					position: absolute;
-					right: 20px;
-					top: 8px;
-					bottom: 0;
-					margin: auto 0;
-					width: 0;
-					height: 0;
+				span {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					.sub-trigger {
+						width: 30px;
+						height: 30px;
+						position: relative;
+						text-decoration: none;
+						padding: 0;
+						cursor: pointer;
+
+						&:before {
+							content: '';
+							border: 7px solid transparent;
+							border-top-color: $main-text-color;
+							position: absolute;
+							right: 0;
+							top: 12px;
+							left: 0;
+							margin: 0 auto;
+							width: 0;
+							height: 0;
+						}
+					}
 				}
 			}
 
-			&.droped.has-children > a,
-			&.droped.has-children > span {
+			&.has-children > a {
+				
+			}
+
+			&.droped.has-children .sub-trigger {
 				&:before {
 					transform: rotate(180deg);
 					transform-origin: 50% 25%;
@@ -135,7 +151,7 @@
 .page-content {
 
 	@include media-breakpoint-up(sm) {
-		box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.2);
+		box-shadow: 3px 4px 5px 0 rgba(0, 0, 0, 0.2);
 	}
 	
 	&.ham-active {

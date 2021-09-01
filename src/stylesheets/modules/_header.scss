@@ -170,18 +170,20 @@
 				padding-right: 17px;
 				cursor: pointer;
 
-				&:before {
-					content: '';
-					border-right: 2px solid $main-text-color;
-					border-bottom: 2px solid $main-text-color;
-					width: 6px;
-					height: 6px;
-					position: absolute;
-					transform: rotate(45deg);
-					right: 0;
-					top: 0;
-					bottom: 0;
-					margin: auto 0;
+				@include media-breakpoint-up(lg) {
+					&:before {
+						content: '';
+						border-right: 2px solid $main-text-color;
+						border-bottom: 2px solid $main-text-color;
+						width: 6px;
+						height: 6px;
+						position: absolute;
+						transform: rotate(45deg);
+						right: 0;
+						top: 0;
+						bottom: 0;
+						margin: auto 0;
+					}
 				}
 			}
 
@@ -210,8 +212,10 @@
 			} 
 
 			&:hover .sub-nav {
-				opacity: 1;
-				transform: scaleY(1);
+				@include media-breakpoint-up(lg) {
+					opacity: 1;
+					transform: scaleY(1);
+				}
 			}
 		}
 	}

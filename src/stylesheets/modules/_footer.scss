@@ -179,11 +179,19 @@
 }
 
 .footer-main-nav {
-	height: 100%;
 	margin-bottom: 40px;
 
 	@include media-breakpoint-up(md) {
-		margin-bottom: 0;
+		//margin-bottom: 0;
+		width: 30%;
+	}
+
+	@include media-breakpoint-up(lg) {
+		width: 25%;
+	}
+
+	@include media-breakpoint-up(xl) {
+		width: auto;
 	}
 
 	& > ul {		
@@ -203,35 +211,30 @@
 			line-height: 1;
 			margin-bottom: 10px;
 
-			&.has-children {
+			&.dropdown {
 				@include media-breakpoint-up(xl) {
 					display: none;
 				}
 
-				& > a {
-					padding-right: 50px;
-					position: relative;
-					margin-right: -50px;
+				& > span {
+					margin-right: -30px;
 
 					@include media-breakpoint-up(md) {
 						margin-right: 0;
 					}
+				}
+
+				& > span a {
+					position: relative;
+					height: auto;
 
 					&:before {
-						content: '';
-						border: 7px solid transparent;
-						border-top-color: $main-text-color;
-						position: absolute;
-						right: 20px;
-						top: 9px;
-						bottom: 0;
-						margin: auto 0;
-						width: 0;
-						height: 0;
+						top: 10px;
 					}
 				}
 			}
-			& > a {
+			& > a,
+			& > span a {
 				color: #324349;
 				font-family: 'DrukWide', sans-serif;
 				font-size: 1.5rem;
@@ -244,6 +247,16 @@
 				&:hover {
 					border-bottom-color: #324349;
 				}
+			}
+		}
+	}
+
+	.dropdown {
+		& > span {
+			justify-content: center;
+			
+			@include media-breakpoint-up(md) {
+				justify-content: space-between;
 			}
 		}
 	}
@@ -266,6 +279,7 @@
 				a {
 					text-decoration: none;
 					color: $main-text-color;
+					line-height: 24 / 16 * 1em;
 				}
 			}
 		}

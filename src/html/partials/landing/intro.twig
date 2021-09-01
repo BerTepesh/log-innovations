@@ -1,7 +1,70 @@
-<div class="intro">
-	<div class="container">
-		<div class="intro__holder">
-			Content
+{% from '../../macros/icon.twig' import icon %}
+
+<div class="intro slider intro-slider" data-plugin="introSlider">
+	<div class="outer-container">
+		<div class="slider__holder">
+			<div class="intro-slider__item slider__item lazyload" data-bg="assets/images/intro/1.jpg">
+				<div class="container">
+					<div class="intro__holder">
+						<h1 class="h1">Логистические Инновации</h1>
+						<div class="intro__text">Строительство, ремонт и демонтаж ЖД-дорог</div>
+						<a href="index.html" class="btn intro__fake-btn">Подробнее</a> <!--for href only-->
+					</div>
+				</div>
+			</div>
+			<div class="intro-slider__item slider__item lazyload" data-bg="assets/images/intro/1.jpg">
+				<div class="container">
+					<div class="intro__holder">
+						<h1 class="h1">Логистические Инновации</h1>
+						<div class="intro__text">Строительство, ремонт и демонтаж ЖД-дорог <br>Строительство, ремонт и демонтаж ЖД-дорог</div>
+						<a href="index2.html" class="btn intro__fake-btn">Подробнее</a> <!--for href only-->
+					</div>
+				</div>
+			</div>
+			<div class="intro-slider__item slider__item lazyload" data-bg="assets/images/intro/1.jpg">
+				<div class="container">
+					<div class="intro__holder">
+						<h1 class="h1">Логистические Инновации </h1>
+						<div class="intro__text">Строительство, ремонт и демонтаж ЖД-дорог <br>Строительство, ремонт и демонтаж ЖД-дорог <br>Строительство, ремонт и демонтаж ЖД-дорог</div>
+						<a href="index3.html" class="btn intro__fake-btn">Подробнее</a> <!--for href only-->
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>	
+	<div class="intro-slider__control">
+		<div class="container">
+			<div class="intro-slider__control__holder">
+				<div class="intro-slider__counter"><p><span class="cur">01</span> / <span class="overal">03</span></p></div>
+				<div class="intro-slider__fake-content"></div> <!--calculate from real content (.intro__holder)-->
+				<div class="intro-slider__nav">
+					<div class="slider__nav"> </div>
+					<div class="slider__dots"> </div>
+					<a href="#" class="btn btn-light intro__btn">Подробнее</a> <!--real btn-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<ul class="features">
+		<li>
+			<span>
+				{{ icon('truck-line' , {'width': 24, 'height': 24}) }}
+			</span>
+			Доставка по всей России
+		</li>
+		<li>
+			<span>
+				{{ icon('wallet-3-line' , {'width': 24, 'height': 24}) }}
+			</span>
+			Гибкая система скидок и оплаты
+		</li>
+		<li>
+			<span>
+				{{ icon('shield-check-line' , {'width': 24, 'height': 24}) }}
+			</span>
+			Гарантия результата
+		</li>
+	</ul>
 </div>

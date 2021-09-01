@@ -5,7 +5,10 @@
 				{% for item in navigation %}
 					{% if item.children|default(false) and item.children|length %}
 						<li class="has-children">
-							<span>{{ item.title }}</span>
+							<span>
+								<a href="#">{{ item.title }}</a>
+								<a class="sub-trigger">&nbsp;</a>
+							</span>
 							<div class="sub-nav">
 								<ul>
 									{% for item in item.children %}
