@@ -113,6 +113,7 @@ img[draggable="false"] {
     border-radius: 7px;
     display: inline-block;
     vertical-align: top;
+    color: $main-text-color;
 
     &-light {
         border: 2px solid #e5eaec;
@@ -124,20 +125,77 @@ img[draggable="false"] {
             color: #fff;
         }
     }
+
+    &-rounded {
+        padding: 0;
+        border-radius: 50%;
+        border: 2px solid #e5eaec;
+        width: 64px;
+        height: 64px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            height: 2px;
+            width: 16px;
+            background-color: $main-text-color;
+            position: relative;
+            transition: background-color .3s ease-in-out;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: -3px;
+                bottom: 0;
+                margin: auto;
+                width: 12px;
+                height: 12px;
+                border-top: 2px solid;
+                border-right: 2px solid;
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            border-color: #809da7;
+            background-color: #809da7;
+            color: #fff;
+
+            span {
+                background-color: #fff;
+            }
+        }
+    }
 }
 
 .outer-container {
     @include make-max-widths-container-width();
     margin: 0 auto;
     display: block;
-    padding: 0 25px;
+    padding-left: 25px;
+    padding-right: 25px;
     width: 100%;
 }
 
 .container {
     @extend .outer-container;
-    @include media-breakpoint-up("xxl") {
-        max-width: 1600px;
+    @include media-breakpoint-up(xxl) {
+        max-width: 1610px;
+    }
+}
+
+.outer-container .container {
+    @include media-breakpoint-down(xxl) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 

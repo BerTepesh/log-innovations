@@ -1,0 +1,39 @@
+@import "components/articles";
+
+.landing-articles {
+	padding: 90px 0 80px;
+	&__head {
+		
+		margin-bottom: 20px;
+
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 45px;
+		}
+
+		h2 {
+			margin-bottom: 40px;
+			flex: 1;
+
+			@include media-breakpoint-up(sm) {
+				margin-bottom: 0;
+			}
+		}
+
+		.btn {
+			
+			font-size: 1.4rem;
+			font-weight: normal;
+			padding: 20px 56px;
+			width: 100%;
+			text-align: center;
+
+			@include media-breakpoint-up(sm) {
+				width: auto;
+				margin-left: 60px;
+			}
+		}
+	}
+}

@@ -7,6 +7,7 @@
 		}
 		@include media-breakpoint-down(sm) {
 			font-size: 1.6rem;
+			line-height: 24 / 16 * 1em;
 			margin-bottom: 10px;
 		}		
 	}
@@ -14,6 +15,11 @@
 	&__text {
 		font-weight: 500;
 		margin-bottom: 50px;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 1.4rem;
+			line-height: 22 / 14 * 1em;
+		}
 	}
 
 	&__btn {
@@ -72,7 +78,10 @@
 		justify-content: center;
 		
 		&__holder {
-			padding: 0 25px;
+			padding: 0 50px;
+			@include media-breakpoint-down(sm) {
+				padding: 0 30px;
+			}
 			
 			@include media-breakpoint-up(xxxl) {
 				padding: 0;
@@ -104,46 +113,6 @@
 			@include media-breakpoint-up(md) {
 				display: flex;
 			}			
-
-			button {
-				position: relative;
-				width: 63px;
-				height: 52px;
-				background-color: #fff;
-
-				&.slick-arrow {
-					left: auto;
-					right: auto;
-					
-
-					&:before {
-						border-color: #8c9ea4;
-						width: 10px;
-						height: 10px;
-						transition: border-color .3s ease-in-out;
-					}
-
-					&:hover {
-						&:before {
-							border-color: #2e4652;
-						}
-					}
-
-					&.next {
-						border-left: 1px solid #e9eff1;
-
-						&:before {
-							left: -5px;
-						}
-					}
-
-					&.prev {
-						&:before {
-							right: -5px;
-						}
-					}
-				}
-			}
 		}
 
 		.slider__dots {
@@ -221,23 +190,9 @@
 		}
 	}
 
-	&__counter {
-		color: #fff;
-		height: 1px;
-		width: 100%;
-		max-width: 95px;
+	.slider__counter {
 		margin-top: -50px;
-		display: inline-block;
-		vertical-align: top;
-		z-index: 3;
-		position: relative;
-
-		p {
-			display: flex;
-			justify-content: space-between;
-			font-size: 1.2rem;
-			color: #b3c0c6;
-		}
+		height: 1px;
 	}
 }
 
@@ -252,9 +207,11 @@
 	background-color: #fff;
 	box-shadow: 0 15px 20px 0 rgba(234, 239, 240, 0.75);
 
+	
+
 	@include media-breakpoint-up(sm) {
-		margin-left: 25px;
-		margin-right: 25px;
+		margin-left: 50px;
+		margin-right: 50px;
 	}
 
 	@include media-breakpoint-up(lg) {
@@ -265,6 +222,11 @@
 	@include media-breakpoint-up(xxxl) {
 		margin-left: 0;
 		margin-right: 0;
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin-left: 30px;
+		margin-right: 30px;
 	}
 
 	li {

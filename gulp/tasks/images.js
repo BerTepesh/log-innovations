@@ -9,7 +9,7 @@ module.exports = function images() {
 		.pipe(imagemin([
 			imagemin.gifsicle({ interlaced: true }),
 			imagemin.mozjpeg({
-				quality: 75,
+				quality: 90,
 				progressive: true
 			}),
 			imagemin.optipng({ optimizationLevel: 5 }),

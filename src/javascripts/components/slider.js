@@ -10,6 +10,7 @@ export default class Slider {
 				'autoplay': false,
 				'autoplaySpeed': 2000,
 				'slidesToShow': 1,
+				'slidesToScroll': 1,
 				'infinite': false,
 				'fade': false,
 				'responsive': []
@@ -26,6 +27,7 @@ export default class Slider {
 			dots: options.dots,
 			appendDots: $container.find('.slider__dots'),
 			slidesToShow: options.slidesToShow,
+			slidesToScroll: options.slidesToScroll,
 			swipeToSlide: true,
 			infinite: options.infinite,
 			accessibility: false,
