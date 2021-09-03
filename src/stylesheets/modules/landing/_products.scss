@@ -74,15 +74,16 @@
 
 			h3 {
 				max-width: 230px;
-				font-family: "DrukWide", sans-serif;
-				font-weight: 500;
-				font-size: 1.8rem;
-				line-height: 24 / 18 * 1em;
 				text-decoration: underline;
 				text-decoration-color: transparent;
 				transition: all .3s ease-in-out;
 				z-index: 3;
 				position: relative;
+				margin-bottom: 20px;
+
+				@include media-breakpoint-up(md) {
+					line-height: 22 / 18 * 1em;
+				}
 			}
 		
 			p {

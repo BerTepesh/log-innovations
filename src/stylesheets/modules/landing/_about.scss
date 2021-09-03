@@ -26,17 +26,8 @@
 	}
 
 	&__info {
-		font-family: "DrukWide", sans-serif;
-		font-weight: 500;
-		font-size: 1.5rem;
-		line-height: 28 / 15 * 1em;
 		padding-top: 15px;
 		margin-bottom: 40px;
-
-		@include media-breakpoint-up(md) {
-			font-size: 1.8rem;
-			line-height: 30 / 18 * 1em;
-		}
 
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;

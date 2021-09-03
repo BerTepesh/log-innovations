@@ -1,0 +1,60 @@
+.documents {
+	margin-bottom: 70px;
+
+	h3 {
+		margin-bottom: 40px;
+	}
+
+	&__list {
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -20px;
+
+		li {
+			width: 100%;
+			padding-left: 20px;
+			margin-bottom: 55px;
+
+			@include media-breakpoint-up(sm) {
+				width: 50%;
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: 25%;
+			}
+
+			.document {
+				
+			}
+		}
+	}
+}
+
+.document {
+	display: flex;
+	
+	&__icon {
+		width: 68px;
+	}
+
+	a {
+		text-decoration: none;
+		color: $main-text-color;
+		margin-top: 5px;
+	}
+
+	&__name {
+		margin-bottom: 5px;
+	}
+
+	a:hover &__name {
+		text-decoration: underline solid 2px;
+	}
+
+	&__size {
+		color: $light-text-color;
+		font-size: 1.4rem;
+	}
+}

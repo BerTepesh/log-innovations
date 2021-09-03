@@ -38,10 +38,13 @@
 			right: 0;
 			left: -30px;
 			height: 20px;
-			box-shadow: inset 0px 7px 5px -5px rgba(0, 0, 0, 0.2);
-			transition: box-shadow .3s ease-in-out;
 		}
-		
+	}
+
+	&_landing &__holder:before {
+		box-shadow: inset 0px 7px 5px -5px rgba(0, 0, 0, 0.2);
+		transition: box-shadow .3s ease-in-out;
+		transition-delay: .6s ease-out;
 	}
 
 	&__info {
@@ -88,12 +91,22 @@
 				text-decoration: none;
 				display: block;
 			}
-			
-			&.active a {
-				pointer-events: none;
-				background-color: rgba(131, 131, 131, .2);
-			}
 
+			&.active {
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					left: -40px;
+					top: 0;
+					height: 50px;
+					background-color: rgba(131, 131, 131, .2);
+					right: 0;
+					border-top: 1px solid rgba(0, 0, 0, 0.05);
+					border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+				}
+			}
+			
 			&.has-children {
 				padding-right: 30px;
 

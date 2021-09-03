@@ -1,0 +1,142 @@
+{% extends 'layouts/base.twig' %}
+{% from 'macros/icon.twig' import icon %}
+
+{% set curPageId = 'about' %}
+
+{% block title %}О компании{% endblock %}
+
+{% block body %}
+		<div class="about">
+			<div class="container">
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li class="active"><a href="about.html">О компании</a></li>
+				</ul>
+				<h1 class="h1 uppercase">О компании</h1>
+				<div class="about__info">
+					<div class="about__row">
+						<div class="about__col">
+							<p class="h5">
+								Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве, ремонте и демонтаже ЖД дорог.</p>
+						</div>
+						<div class="about__col">
+							<p>Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве, ремонте и демонтаже ЖД дорог. А также мы не первый год занимаемся поставкой материалов ВСП по всей России, где наш опыт и наработки в полной мере удовлетворяют потребности даже самого изыскательного партнера.</p>
+						</div>
+					</div>
+					<div class="about__row">
+						<div class="about__col">
+							<p>Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве, ремонте и демонтаже ЖД дорог. А также мы не первый год занимаемся поставкой материалов ВСП по всей России, где наш опыт и наработки в полной мере удовлетворяют потребности даже самого изыскательного партнера.</p>
+						</div>
+						<div class="about__col">
+							<p>Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве, ремонте и демонтаже ЖД дорог. А также мы не первый год занимаемся поставкой материалов ВСП по всей России, где наш опыт и наработки в полной мере удовлетворяют потребности даже самого изыскательного партнера.</p>
+						</div>
+					</div>
+				</div>
+				<h2 class="h2 uppercase">Документы</h2>
+				<div class="documents">
+					<h3 class="h4">Лицензии</h3>
+					<ul class="documents__list">
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	СРО</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	Соответствия</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	СРО</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	Соответствия</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	СРО</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	Соответствия</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="documents">
+					<h3 class="h4">Сертификаты</h3>
+					<ul class="documents__list">
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	СРО</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="document">
+								<div class="document__icon">
+									{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+								</div>
+								<a href="#" class="document__content">
+									<div class="document__name h6">Сертификат  <br>	Соответствия</div>
+									<div class="document__size">(1.6 Мб)</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+    {% include 'partials/request.twig' %}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="assets/stylesheets/about.min.css" />
+{% endblock %}

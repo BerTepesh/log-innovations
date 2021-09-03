@@ -1,30 +1,31 @@
 {% from '../../macros/icon.twig' import icon %}
 
-<div class="container">
-	<div class="advantages">
-		<h2 class="h2"><span>Наши преимущества</span></h2>
+
+<section class="advantages" data-reveal-group>
+	<div class="container">
+		<h2 class="h3 uppercase" data-reveal data-reveal-delay="100"><span>Наши преимущества</span></h2>
 		<ul>
-			<li>
+			<li data-reveal data-reveal-delay="200">
 				<span>
 					{{ icon('shield-cross-line' , {'width': 29, 'height': 29}) }}
 				</span>
-				<h3 class="h3">Гарантии на все услуги</h3>
+				<h3 class="h6 uppercase">Гарантии на все услуги</h3>
 				<p>Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве</p>
 			</li>
-			<li>
+			<li data-reveal data-reveal-delay="300">
 				<span>
 					{{ icon('award-line' , {'width': 28, 'height': 28}) }}
 				</span>
-				<h3 class="h3">лицензии и сертификаты</h3>
+				<h3 class="h6 uppercase">лицензии и сертификаты</h3>
 				<p>Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве</p>
 			</li>
-			<li>
+			<li data-reveal data-reveal-delay="400">
 				<span>
 					{{ icon('customer-service-line' , {'width': 27, 'height': 27}) }}
 				</span>
-				<h3 class="h3">Профессионализм</h3>
+				<h3 class="h6 uppercase">Профессионализм</h3>
 				<p>Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве</p>
 			</li>
 		</ul>
-	</div>
-</div>
+	</div>	
+</section>

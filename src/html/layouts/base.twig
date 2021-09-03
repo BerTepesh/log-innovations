@@ -40,7 +40,7 @@
 			{
 				'title': 'О компании',
 				'pageId': 'about',
-				'url': '/',
+				'url': 'about.html',
 			},
 			{
 				'title': 'Продукция',
@@ -81,15 +81,6 @@
 							},
 					]
 			},
-
-			
-
-
-
-
-
-
-
 			{
 				'title': 'Отзывы',
 				'pageId': 'reviews',
@@ -113,7 +104,14 @@
 		{% include "../partials/ham-panel.twig" with { 'navigation': navigation } %}
 		<div class="page-content">
 				<main>
-					{% block body %}{% endblock %}
+					{% if curPageId != 'home' %} 
+						<div class="inner-page">
+							{% block body %}{% endblock %}
+						</div>
+					{% else %}
+						{% block body %}{% endblock %}
+					{% endif %}
+					
 				</main>
 				{% block footer %}  
 					{% include "../partials/footer.twig" with { 'navigation': navigation } %}

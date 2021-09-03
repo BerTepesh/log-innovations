@@ -1,0 +1,42 @@
+@import "imports";
+
+@import "components/documents";
+@import "modules/request";
+
+.about {
+
+	.h1 {
+		margin-bottom: 30px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 50px;
+		}
+	}
+
+	.h2 {
+		margin-bottom: 95px;
+	}
+
+	.h4 {
+		border-bottom: 1px solid #ebebeb;
+		padding-bottom: 30px;
+	}
+
+	&__info {
+		margin-bottom: 95px;
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__row &__col {
+		width: 100%;
+		margin-bottom: 30px;
+
+		@include media-breakpoint-up(md) {
+			width: 45%;
+		}
+	}
+}
