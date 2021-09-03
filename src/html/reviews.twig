@@ -1,0 +1,105 @@
+{% extends 'layouts/base.twig' %}
+
+{% set curPageId = 'reviews' %}
+
+{% block title %}Отзывы{% endblock %}
+
+{% block body %}
+		<div class="reviews">
+			<div class="container">
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li class="active"><a href="reviews.html">Отзывы</a></li>
+				</ul>
+				<h1 class="h1 uppercase" data-reveal>Отзывы</h1>
+				<ul class="reviews__list">
+					<li class="review">
+						<a href="assets/images/reviews/1.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/1.jpg" alt="Строй-Инвест">
+							</div>
+							<div class="review__name h5">ООО "Строй-Инвест"</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/2.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/2.jpg" alt="Строй-Арсенал">
+							</div>
+							<div class="review__name h5">Строй-Арсенал</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/1.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/1.jpg" alt="Строй-Инвест">
+							</div>
+							<div class="review__name h5">ООО "Строй-Инвест"</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/2.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/2.jpg" alt="Строй-Арсенал">
+							</div>
+							<div class="review__name h5">Строй-Арсенал</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/1.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/1.jpg" alt="Строй-Инвест">
+							</div>
+							<div class="review__name h5">ООО "Строй-Инвест"</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/2.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/2.jpg" alt="Строй-Арсенал">
+							</div>
+							<div class="review__name h5">Строй-Арсенал</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/1.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/1.jpg" alt="Строй-Инвест">
+							</div>
+							<div class="review__name h5">ООО "Строй-Инвест"</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/2.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/2.jpg" alt="Строй-Арсенал">
+							</div>
+							<div class="review__name h5">Строй-Арсенал</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/1.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/1.jpg" alt="Строй-Инвест">
+							</div>
+							<div class="review__name h5">ООО "Строй-Инвест"</div>
+						</a>
+					</li>
+					<li class="review">
+						<a href="assets/images/reviews/2.jpg" data-fancybox="gallery">
+							<div class="review__img">
+								<img src="assets/images/reviews/2.jpg" alt="Строй-Арсенал">
+							</div>
+							<div class="review__name h5">Строй-Арсенал</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+    {% include 'partials/request.twig' %}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="assets/stylesheets/reviews.min.css" />
+{% endblock %}

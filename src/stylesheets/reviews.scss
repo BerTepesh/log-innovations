@@ -1,0 +1,126 @@
+@import "imports";
+@import "modules/request";
+
+.reviews {
+
+	h1 {
+		margin-bottom: 70px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 95px;
+		}
+	}
+	
+	&__list {
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		li.review {
+			width: 100%;
+			margin-bottom: 60px;
+			text-align: center;
+			padding-right: 0;
+
+			.review__img {
+				right: 0;
+				margin: 0 auto 35px;
+			}
+
+			@include media-breakpoint-up(sm) {
+				width: 50%;
+				text-align: left;
+				padding-right: 30px;
+
+				.review__img {
+					right: auto;
+					margin: 0 0 35px;
+				}
+			}
+
+			@include media-breakpoint-up(md) {
+				width: 33.3333%;
+				margin-bottom: 120px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: 25%;
+			}
+		}
+	}
+}
+
+.review {
+	padding-top: 190px;
+	padding-right: 30px;
+
+	a {
+		position: relative;
+		text-decoration: none;
+	}
+
+	&__img {
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		width: 106px;
+		height: 155px;
+		margin-bottom: 35px;
+		box-shadow: 0 5px 20px 0 rgba(128, 157, 167, 0.15);
+
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: opacity .3s ease-in-out;
+		}
+
+		&:before {
+			background-color: rgba(128, 157, 167, 0.75);
+		}
+
+		&:after {
+			margin: auto;
+			width: 38px;
+			height: 38px;
+			color: $main-text-color;
+
+			background-color: #fff;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath fill='%23314249' d='M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM10 10V7h2v3h3v2h-3v3h-2v-3H7v-2h3z'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: center center;
+			border-radius: 50%;
+			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__name {
+		display: inline-block;
+		vertical-align: top;
+		transition: all .3s ease-in-out;
+		color: $main-text-color;
+		line-height: 22 / 15 * 1em;
+	}
+
+	a:hover &__img {
+		&:before,
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	a:hover &__name {
+		text-decoration: underline 2px solid;
+	}
+}
