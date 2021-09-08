@@ -1,0 +1,22 @@
+@import "imports";
+
+@import "components/articles";
+
+.articles {
+	h1 {
+		margin-bottom: 50px;
+	}
+
+	&__btn {
+		margin-top: 30px;
+		.btn {
+			width: 100%;
+			text-align: center;
+			color: #324349;
+			font-size: 1.4rem;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

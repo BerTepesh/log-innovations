@@ -1,0 +1,93 @@
+@import "components/slider";
+
+.slider {
+	&__holder {
+		margin-bottom: 30px;
+		padding: 10px 50px 0;
+	}
+
+	.slick-slide {
+		cursor: grab;
+		img {
+			width: auto;
+		}
+	}
+}
+
+.slider-nav {
+	position: relative;
+	padding: 0 20px;
+	max-width: 300px;
+	margin: 0 auto;
+
+	@include media-breakpoint-up(sm) {
+		padding: 0 60px;
+	}
+
+	.slick-slide {
+		border: 2px solid transparent;
+		transition: border-color .3s ease-in-out;
+		
+		
+		&.slick-current  {
+			border-color: #e5eaec;
+		}
+	}
+	
+
+	&__item {
+		height: 90px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+		cursor: pointer;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.slick-arrow {
+		background-color: transparent;
+		color: transparent;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		height: 20px;
+		width: 20px;
+		border: none;
+		cursor: pointer;
+		&:before {
+			position: absolute;
+			content: '';
+			border-top: 2px solid #000;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;		
+			width: 10px;
+			height: 10px;		
+		}
+
+		&.slick-prev {
+			left: 0;
+
+			&:before {
+				border-left: 2px solid #000;
+				transform: rotate(-45deg);
+			}
+		}
+
+		&.slick-next {
+			right: 0;
+			
+			&:before {
+				transform: rotate(45deg);
+				border-right: 2px solid #000;
+			}
+		}
+	}
+}

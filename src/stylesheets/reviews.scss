@@ -1,5 +1,4 @@
 @import "imports";
-@import "modules/request";
 
 .reviews {
 
@@ -44,16 +43,12 @@
 				width: 33.3333%;
 				margin-bottom: 120px;
 			}
-
-			@include media-breakpoint-up(lg) {
-				width: 25%;
-			}
 		}
 	}
 }
 
 .review {
-	padding-top: 190px;
+	padding-top: 342px;
 	padding-right: 30px;
 
 	a {
@@ -65,8 +60,8 @@
 		position: absolute;
 		bottom: 100%;
 		left: 0;
-		width: 106px;
-		height: 155px;
+		width: 210px;
+		height: 307px;
 		margin-bottom: 35px;
 		box-shadow: 0 5px 20px 0 rgba(128, 157, 167, 0.15);
 
@@ -101,7 +96,9 @@
 		}
 
 		img {
-			width: 100%;
+			object-fit: cover;
+			min-height: 100%;
+			max-width: 100%;
 		}
 	}
 

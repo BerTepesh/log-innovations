@@ -39,17 +39,17 @@
 		width: 68px;
 	}
 
-	a {
+	&__content {
 		text-decoration: none;
 		color: $main-text-color;
 		margin-top: 5px;
 	}
 
 	&__name {
-		margin-bottom: 5px;
+		margin-bottom: 0;
 	}
 
-	a:hover &__name {
+	&__content:hover &__name {
 		text-decoration: underline solid 2px;
 	}
 

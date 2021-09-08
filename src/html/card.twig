@@ -1,0 +1,103 @@
+{% extends 'layouts/base.twig' %}
+{% from 'macros/icon.twig' import icon %}
+
+{% set curPageId = 'card' %}
+
+{% block title %}Накладка 1Р65 новая{% endblock %}
+
+{% block body %}
+		<div class="card">
+			<div class="container">
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="production.html">Продукция</a></li>
+					<li><a href="goods.html">Накладки</a></li>
+					<li class="active"><a href="card.html">Накладка 1Р65 новая</a></li>
+				</ul>
+				<h1 class="h1 uppercase" data-reveal>Накладка 1Р65 новая</h1>
+
+				<div class="card__content">
+					<div class="card__holder">
+						<div class="card__caption">Новинка</div>
+						<div class="card__preview slider preview" data-plugin="preview">
+							<div class="slider__holder">
+								<img src="assets/images/goods/1.png" alt="Накладка 1Р65 новая">
+								<img src="assets/images/goods/1-2.jpg" alt="Накладка 1Р65 новая">
+								<img src="assets/images/goods/1.png" alt="Накладка 1Р65 новая">
+								<img src="assets/images/goods/1-2.jpg" alt="Накладка 1Р65 новая">
+							</div>
+							<div class="slider-nav">
+								<div>
+									<div class="slider-nav__item">
+										<img src="assets/images/goods/1.png" alt="Накладка 1Р65 новая">
+									</div>
+								</div>
+								<div>
+									<div class="slider-nav__item">
+										<img src="assets/images/goods/1-2.jpg" alt="Накладка 1Р65 новая">
+									</div>
+								</div>
+								<div>
+									<div class="slider-nav__item">
+										<img src="assets/images/goods/1.png" alt="Накладка 1Р65 новая">
+									</div>
+								</div>
+								<div>
+									<div class="slider-nav__item">
+										<img src="assets/images/goods/1-2.jpg" alt="Накладка 1Р65 новая">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card__info">
+							<div class="card__text">
+								Накладка 1Р65 – фасонное изделие металлопроката, используемое для соединения железнодорожных рельсов широкой колеи
+							</div>
+							<div class="card__buy">
+								<div class="card__price h3">90 000 р.</div>
+								<div class="card__request">
+									<a href="#" class="btn btn-dark side-modal-trigger" data-src="#dialog-content">Оставить заявку</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card__parameters">
+						<h2 class="h3 uppercase">характеристики</h2>
+						<p>Накладка 1Р65 имеет шесть отверстий круглой и овальной формы (три отверстия 30х40 мм; три отверстия с диаметром 30 мм)</p>
+						<ul>
+							<li>
+								<b class="h6">Масса</b>
+								<span>29,26 кг</span>
+							</li>
+							<li>
+								<b class="h6">Ширина</b>
+								<span>130 мм</span>
+							</li>
+							<li>
+								<b class="h6">Длина</b>
+								<span>1000 мм</span>
+							</li>
+							<li>
+								<b class="h6">Высота</b>
+								<span>45,5 мм</span>
+							</li>
+						</ul>
+						<a href="#" class="document">
+							<div class="document__icon">
+								{{ icon('pdf' , {'width': 35, 'height': 48}) }}
+							</div>
+							<div class="document__content">
+								<div class="document__name h6">Скачать PDF</div>
+								<div class="document__size">(1.6 Мб)</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="assets/stylesheets/card.min.css" />
+{% endblock %}

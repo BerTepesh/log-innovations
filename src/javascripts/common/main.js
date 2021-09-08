@@ -14,9 +14,12 @@ import '../modules/smooth-scroll';
 import '../modules/modal';
 import '../modules/reveal';
 import '../components/dropdown';
+import '../modules/validation';
 
 import '../modules/landing/intro-slider';
 import '../modules/landing/partners-slider';
+
+import '../modules/preview';
 
 
 $(function() {

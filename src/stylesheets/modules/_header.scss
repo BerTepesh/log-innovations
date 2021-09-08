@@ -54,6 +54,9 @@
 		}
 
 		.btn {
+			&:focus-visible {
+				outline: none;
+			}
 			@include media-breakpoint-down(lg) {
 				padding: 10px 15px;
 			}

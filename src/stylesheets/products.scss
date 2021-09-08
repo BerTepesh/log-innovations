@@ -1,0 +1,16 @@
+@import "imports";
+ 
+@import "modules/products";
+
+.products {
+	background-color: transparent;
+	padding-top: 0;
+	padding-bottom: 0;
+	&:before {
+		display: none;
+	}
+
+	h1 {
+		margin-bottom: 20px;
+	}
+}

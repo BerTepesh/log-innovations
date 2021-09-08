@@ -34,6 +34,7 @@
 		</style>
 	{% endblock %}
 </head>
+{% from '../macros/icon.twig' import icon %}
 <body data-plugin="reveal" data-preload>
 	<div class="page-content-wrapper">
 		{% set navigation = [            
@@ -45,39 +46,39 @@
 			{
 				'title': 'Продукция',
 				'pageId': 'products',
-				'url': '#',
+				'url': 'products.html',
 				'children': [
 							{
 								'title': 'Рельсы железодорожные',
-								'url': '#',
+								'url': 'goods.html',
 							},
 							{
 								'title': 'Стрелочные переводы',
-								'url': '#',
+								'url': 'goods.html',
 							},
 							{
 								'title': 'Накладки',
-								'url': '#',
+								'url': 'goods.html',
 							},
 							{
 								'title': 'Крепежные элементы',
-								'url': '#',
+								'url': 'goods.html',
 							},
 							{
 								'title': 'Прокладки',
-								'url': '#',
+								'url': 'goods.html',
 							},
 							{
 								'title': 'Шпалы деревянные',
-								'url': '#',
+								'url': 'goods.html',
 							},
 							{
 								'title': 'Шпалы железобетонные',
-								'url': '#',
+								'url': 'goods.html',
 							},
 							{
 								'title': 'Подкладки',
-								'url': '#',
+								'url': 'goods.html',
 							},
 					]
 			},
@@ -89,12 +90,12 @@
 			{
 				'title': 'Статьи',
 				'pageId': 'articles',
-				'url': '#',
+				'url': 'articles.html',
 			},
 			{
 				'title': 'Контакты',
 				'pageId': 'contacts',
-				'url': '#',
+				'url': 'contacts.html',
 			},
 		] %}	
 		<div class="preloader visible"><div class="preloader__loader"></div></div>
@@ -118,7 +119,45 @@
 				{% endblock %}
 		</div>
 		<div class="js-modal">
-				{% block modal %}{% endblock %}
+				{% block modal %}
+					<div class="request-modal form" id="dialog-content" style="display:none;">
+						<div class="request-modal__holder">
+							<form>
+								<h2 class="h3 uppercase">Оставить заявку</h2>
+								<div class="form-group">
+									<div>
+										<div class="form-control">
+											<input type="text" placeholder="Имя" name="Name">
+										</div>
+										<div class="form-control">
+											<input type="tel" placeholder="Телефон" name="Phone">
+										</div>
+										<div class="form-control">
+											<input type="text" placeholder="E-mail" name="Email">
+										</div>
+										<div class="form-control">
+											<textarea placeholder="Комментарий" name="Comment"></textarea>
+										</div>
+									</div>
+									<div class="form-control">
+										<button type="submit" class="btn btn-dark" data-fancybox  data-src="#success-content">Отправить</button>
+										<p class="form__agree">
+											Нажимая на "Отправить", Вы даете согласие на обработку персональных данных и соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer"> пользовательським соглашением и политикой конфиденциальности</a>
+										</p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="success-modal form" id="success-content" style="display:none;">
+						<div class="success-modal__holder">
+							{{ icon('check' , {'width': 68, 'height': 68}) }}
+							<h2 class="h3 uppercase">Спасибо!</h2>
+							<p class="h5">Ваша заявка успешно отправлена</p>
+							<p>Мы свяжемся с Вами в ближайшее время для уточнения деталей</p>
+						</div>
+					</div>
+				{% endblock %}
 		</div>
 	</div>
 	

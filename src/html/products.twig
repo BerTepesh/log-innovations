@@ -1,0 +1,107 @@
+{% extends 'layouts/base.twig' %}
+
+{% set curPageId = 'products' %}
+
+{% block title %}Продукция{% endblock %}
+
+{% block body %}
+		<div class="products">
+			<div class="container">
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li class="active"><a href="products.html">Продукция</a></li>
+				</ul>
+				<h1 class="h1 uppercase" data-reveal>Продукция</h1>
+				<div class="products__list">
+					<div class="products__item products__item--turnout" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<h3 class="h5">Стрелочные переводы</h3>
+							<div class="products__turnout-image">
+								<img src="assets/images/products/landing/1.png" alt="Стрелочные переводы">
+							</div>
+						</a>
+					</div>
+					<div class="products__item products__item--strap" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<h3 class="h5">Накладки</h3>
+							<p class="products__text">
+								Наша компания уже давно зарекомендовала себя на рынке как надежный партнер в строительстве
+							</p>
+							<div class="products__strap-image">
+								<img src="assets/images/products/landing/2.png" alt="Накладки">
+							</div>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/3.png" alt="Крепежные элементы">
+							</div>
+							<h3 class="h5">Крепежные элементы</h3>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/4.png" alt="Прокладки">
+							</div>
+							<h3 class="h5">Прокладки</h3>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/5.png" alt="Шпалы железобетонные">
+							</div>
+							<h3 class="h5">Шпалы железобетонные</h3>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/6.png" alt="Подкладки">
+							</div>
+							<h3 class="h5">Подкладки</h3>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/3.png" alt="Крепежные элементы">
+							</div>
+							<h3 class="h5">Крепежные элементы</h3>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/4.png" alt="Прокладки">
+							</div>
+							<h3 class="h5">Прокладки</h3>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/5.png" alt="Шпалы железобетонные">
+							</div>
+							<h3 class="h5">Шпалы железобетонные</h3>
+						</a>
+					</div>
+					<div class="products__item" data-reveal data-reveal-delay="100">
+						<a href="goods.html">
+							<div class="products__image">
+								<img src="assets/images/products/landing/6.png" alt="Подкладки">
+							</div>
+							<h3 class="h5">Подкладки</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="assets/stylesheets/products.min.css" />
+{% endblock %}

@@ -13,6 +13,7 @@ export default class Slider {
 				'slidesToScroll': 1,
 				'infinite': false,
 				'fade': false,
+				'asNavFor': '',
 				'responsive': []
 			};
 	}
@@ -34,6 +35,7 @@ export default class Slider {
 			autoplay: options.autoplay,
 			autoplaySpeed: options.autoplaySpeed,
 			speed: 900,
+			asNavFor: options.asNavFor,
 			prevArrow: '<button type="button" class="prev"></button>',
 			nextArrow: '<button type="button" class="next"></button>',
 			appendArrows: $container.find('.slider__nav'),
