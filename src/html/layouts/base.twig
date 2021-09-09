@@ -105,7 +105,7 @@
 		{% include "../partials/ham-panel.twig" with { 'navigation': navigation } %}
 		<div class="page-content">
 				<main>
-					{% if curPageId != 'home' %} 
+					{% if curPageId != 'home' and curPageId != '404' %} 
 						<div class="inner-page">
 							{% block body %}{% endblock %}
 						</div>
