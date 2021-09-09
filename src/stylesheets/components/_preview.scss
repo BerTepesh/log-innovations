@@ -7,9 +7,13 @@
 	}
 
 	.slick-slide {
+		a {
+			text-align: center;
+		}
 		cursor: grab;
 		img {
-			width: auto;
+			max-width: 100%;
+			display: inline-block;
 		}
 	}
 }

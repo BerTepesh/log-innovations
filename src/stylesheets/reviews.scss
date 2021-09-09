@@ -22,6 +22,7 @@
 			margin-bottom: 60px;
 			text-align: center;
 			padding-right: 0;
+			position: relative;
 
 			.review__img {
 				right: 0;
@@ -52,18 +53,26 @@
 	padding-right: 30px;
 
 	a {
-		position: relative;
 		text-decoration: none;
+
+		@include media-breakpoint-up(sm) {
+			position: relative;
+		}
 	}
 
 	&__img {
 		position: absolute;
-		bottom: 100%;
+		top: 0;
 		left: 0;
-		width: 210px;
+		width: 200px;
 		height: 307px;
 		margin-bottom: 35px;
 		box-shadow: 0 5px 20px 0 rgba(128, 157, 167, 0.15);
+
+		@include media-breakpoint-up(sm) {
+			bottom: 100%;
+			top: auto;
+		}
 
 		&:before,
 		&:after {
