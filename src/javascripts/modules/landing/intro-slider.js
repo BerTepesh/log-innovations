@@ -26,10 +26,18 @@ class IntroSlider extends Slider {
 			const currentSlide = holder.find('.slick-slide:not(.slick-cloned)').eq(_currentSlide || 0);
 			const contentHeight = currentSlide.find('.intro__holder').height();
 			const fakeContent = $container.find('.intro-slider__fake-content');
-			const counter = $container.find('.intro-slider__counter');
+			const counter = $container.find('.slider__counter');
 			const btnUrl = currentSlide.find('.intro__fake-btn').attr('href');
 
-			$container.find('.intro__btn').attr('href', btnUrl);
+			if(btnUrl) {
+				const btn = `<a href="${btnUrl}" class="btn btn-light intro__btn">Подробнее</a>`;
+				$container.find('.intro__btn').html(btn);
+				$container.find('.intro__holder').css('padding-bottom', '');
+			} 
+			else {
+				$container.find('.intro__btn').html('');
+				$container.find('.intro__holder').css('padding-bottom', '54px');
+			}
 
 			fakeContent.height(contentHeight - 100);
 
@@ -40,24 +48,30 @@ class IntroSlider extends Slider {
 
 		super ($container, opts);
 
-		function update(slick, _nextSlide) {
+		holder.on('beforeChange', function(event, slick, currentSlide, _nextSlide){
 			const nextSlide = holder.find('.slick-slide:not(.slick-cloned)').eq(_nextSlide || 0);
 			const contentHeight = nextSlide.find('.intro__holder').height();
 			const fakeContent = $container.find('.intro-slider__fake-content');
-			const counter = $container.find('.intro-slider__counter');
+			const counter = $container.find('.slider__counter');
 			const btnUrl = nextSlide.find('.intro__fake-btn').attr('href');
 
-			$container.find('.intro__btn').attr('href', btnUrl);
 
-			fakeContent.height(contentHeight - 100);
+			if(btnUrl) {
+				const btn = `<a href="${btnUrl}" class="btn btn-light intro__btn">Подробнее</a>`;
+				$container.find('.intro__btn').html(btn);
+				$container.find('.intro__holder').css('padding-bottom', '');
+				fakeContent.height(contentHeight - 100);
+			} 
+			else {
+				$container.find('.intro__btn').html('');
+				$container.find('.intro__holder').css('padding-bottom', '54px');
+				fakeContent.height(contentHeight - 46);
+			}
+
 
 			var i = (_nextSlide ? _nextSlide : 0) + 1;
 			counter.find('.cur').text(i.toString().padStart(2, '0'));
 			counter.find('.overal').text(slick.slideCount.toString().padStart(2, '0'));
-		}
-
-		holder.on('beforeChange', function(event, slick, currentSlide, _nextSlide){
-			update(slick, _nextSlide);
 		});
 	}
 }

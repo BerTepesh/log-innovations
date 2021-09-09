@@ -66,15 +66,21 @@
 		}
 	}
 
-	&__caption {
+	&__captions {
 		position: absolute;
 		left: 12px;
 		top: 10px;
-		background-color: #f2f6f6;
-		border-radius: 4px;
-		padding: 2px 15px;
-		font-size: 1.1rem;
-		color: #7d878a;
+
+		span {
+			background-color: #f2f6f6;
+			border-radius: 4px;
+			padding: 2px 15px;
+			font-size: 1.1rem;
+			color: #7d878a;
+			margin-bottom: 10px;
+			display: block;
+			text-align: center;
+		}
 	}
 
 	&__name {

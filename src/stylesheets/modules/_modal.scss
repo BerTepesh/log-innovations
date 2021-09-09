@@ -1,12 +1,12 @@
 @import "~@fancyapps/ui/src/Fancybox/fancybox";
 
-body.compensate-for-scrollbar {
-	overflow: visible !important;
-}
+// body.compensate-for-scrollbar {
+// 	overflow: visible !important;
+// }
 
-.compensate-for-scrollbar {
-	padding-right: 0 !important;
-}
+// .compensate-for-scrollbar {
+// 	padding-right: 0 !important;
+// }
 
 .fancybox__backdrop {
 	background-color: rgba(225, 239, 239, .5);
@@ -22,7 +22,6 @@ body.compensate-for-scrollbar {
 	
 	@include media-breakpoint-up(sm) {
 		padding: 95px 70px 95px 90px;
-		box-shadow: -10px 0 20px #bfc9cd;
 	}
 }
 
@@ -35,6 +34,11 @@ body.compensate-for-scrollbar {
 		.fancybox__content {
 				width: 100%;
 				height: 100%;
+				overflow: auto;
+
+				@include media-breakpoint-up(sm) {
+					box-shadow: -10px 0 20px #bfc9cd;
+				}
 		}
 	}
 

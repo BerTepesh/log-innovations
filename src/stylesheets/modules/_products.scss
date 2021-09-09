@@ -67,9 +67,16 @@
 			justify-content: space-between;
 			z-index: 1;
 			transition: all .3s ease-in-out;
+			align-items: center;
+			text-align: center;
 
 			@include media-breakpoint-up(sm) {
 				padding: 25px 50px 20px;
+			}
+
+			@include media-breakpoint-up(md) {
+				align-items: flex-start;
+				text-align: left;
 			}
 
 			h3 {
@@ -111,11 +118,20 @@
 				content: '';
 				position: absolute;
 				top: 40px;
-				left: 50px;
+				left: -100px;
+				right: 0;
+				margin: 0 auto;
 				width: 100px;
 				height: 100px;
 				background-image: url(../../assets/images/products/landing/back.png);
 				z-index: -1;
+
+				@include media-breakpoint-up(md) {
+					top: 40px;
+					left: 50px;
+					margin: 0;
+					right: auto;
+				}
 			}
 
 			&:hover {
@@ -149,12 +165,10 @@
 				flex-direction: row;
 				width: 100%;
 				padding: 25px 25px;
+				text-align: left;
 
 				@include media-breakpoint-down(sm) {
 					min-height: auto;
-				}
-
-				@include media-breakpoint-up(sm) {
 					padding: 25px 50px;
 				}
 
@@ -182,6 +196,7 @@
 			a {
 				padding-top: 20px;
 				display: block;
+				text-align: left;
 
 				@include media-breakpoint-down(sm) {
 					min-height: 230px;

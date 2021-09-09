@@ -13,6 +13,10 @@
 		}		
 	}
 
+	&__holder {
+		transition: all .3s ease-in-out;
+	}
+
 	&__text {
 		font-weight: 500;
 		margin-bottom: 50px;
@@ -24,11 +28,13 @@
 	}
 
 	&__btn {
-		border-color: #809da7;
-		color: #fff;
-		font-weight: normal;
-		padding-top: 14px;
-		padding-bottom: 14px;
+		a {
+			border-color: #809da7;
+			color: #fff;
+			font-weight: normal;
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
 	}
 
 	&__fake-btn {

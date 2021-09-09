@@ -448,6 +448,7 @@ img[draggable="false"] {
 		color: #7d878a;
 		font-size: 1.3rem;
 		line-height: 20 / 13 * 1em;
+		margin-bottom: 40px;
 		
 		a {
 			color: #7d878a;
@@ -729,4 +730,58 @@ ol.styled-list {
 
 .text-center {
 	text-align: center;
+}
+
+.error-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 50px 0;
+	&__holder {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__text,
+	&__num {
+		width: 100%;
+
+		@include media-breakpoint-up(xl) {
+			width: 50%;
+		}
+	}
+
+	&__num {
+		font-size: 12rem;
+		line-height: 160 / 120 * 1em;
+
+		@include media-breakpoint-up(sm) { 
+			font-size: 19rem;
+			line-height: 200 / 190 * 1em;
+		}
+
+		@include media-breakpoint-up(xl) { 
+			font-size: 29rem;
+			line-height: 300 / 290 * 1em;
+		}
+	}
+
+	&__text {
+		padding: 50px 0 20px 0;
+		
+		@include media-breakpoint-up(xl) { 
+			padding: 50px 0 20px 40px;
+			border-left: 1px solid;
+		}
+
+		p {
+			margin-bottom: 30px;
+		}
+
+		a {
+			color: $main-text-color;
+		}
+	}
 }
