@@ -50,6 +50,7 @@
 		text-decoration: none;
 		color: $main-text-color;
 		background-color: #fff;
+		height: 100%;
 
 		@include media-breakpoint-up(md) {
 			padding: 55px 55px 45px;

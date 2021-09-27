@@ -239,6 +239,7 @@
 				}
 			}
 			& > a,
+			& > span,
 			& > span a {
 				color: #324349;
 				font-family: 'DrukWide', sans-serif;
@@ -252,6 +253,10 @@
 				&:hover {
 					border-bottom-color: #324349;
 				}
+			}	
+			& > span:hover {
+				border-bottom-color: transparent;
+				transition: 0s;
 			}
 		}
 	}
@@ -313,7 +318,7 @@
 			margin-bottom: 30px;
 			line-height: 1;
 
-			a {
+			a, span {
 				color: $main-text-color;
 				font-size: 1.4rem;
 				line-height: 20 / 14 * 1em;
@@ -325,6 +330,10 @@
 				&:hover {
 					border-bottom-color: #324349;
 				}
+			}
+			span:hover {
+				border-bottom-color: transparent;
+				transition: 0s;
 			}
 		}
 	}

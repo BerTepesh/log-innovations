@@ -85,9 +85,19 @@
 			margin-bottom: 5px;
 			
 			& > a,
-			& span  a {
+			& > span {
 				color: $main-text-color;
-				padding: 10px 40px;
+				padding: 10px 0 10px 40px;
+				text-decoration: none;
+				display: block;
+			}
+
+			& > a {
+				padding-right: 40px;
+			}
+
+			& > span a {
+				color: $main-text-color;
 				text-decoration: none;
 				display: block;
 			}

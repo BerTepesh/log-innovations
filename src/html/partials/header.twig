@@ -24,7 +24,13 @@
 									</div>
 								</li>
 							{% else %}
-								<li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+								<li>
+									{% if curPageId == item.pageId %}
+										<span class="active">{{ item.title }}</span>
+									{% else %}
+										<a href="{{ item.url }}">{{ item.title }}</a>
+									{% endif %}
+								</li>
 							{% endif %}
 						{% endfor %}
 					</ul>
