@@ -14,10 +14,11 @@
 	}
 
 	&__logo {
-		padding-right: 20px;
+		margin-right: 20px;
 		text-decoration: none;
 		display: flex;
 		align-items: center;
+		z-index: 999;
 
 		img {
 			width: 29px;
